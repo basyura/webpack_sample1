@@ -7,6 +7,24 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'public/js'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/, 
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loader:"file-loader",
+        options:{
+          name:'[name].[ext]',
+          outputPath:'../images/',
+          publicPath: path =>  "images/" + path,
+          //the images will be emited to dist/assets/images/ folder
+        }
+      },
+    ]
+  }
   /*
   // ローダーの設定
   module: {

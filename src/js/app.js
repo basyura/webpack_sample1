@@ -1,11 +1,14 @@
 // https://qiita.com/soarflat/items/28bf799f7e0335b68186
-
+//
 import $ from 'jquery';
 import additionCalculator from './modules/addition-calculator';
 import taxCalculator from './modules/tax-calculator';
 
+// どっちかでよさそう
 require('jquery-ui-bundle');
-require('jquery-ui/ui/widgets/datepicker');
+//require('jquery-ui/ui/widgets/datepicker');
+
+require('jquery-ui-bundle/jquery-ui.css');
 
 var item1Price = 400;
 var item2Price = 600;
